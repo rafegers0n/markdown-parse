@@ -25,7 +25,9 @@ public class MarkdownParse {
             nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             openParen = markdown.indexOf("(", nextCloseBracket);
             closeParen = markdown.indexOf(")", openParen);
-
+            if(nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1){
+                break;
+            }
             if (!isImage(markdown.substring(openParen + 1, closeParen)) && openParen-nextCloseBracket ==1){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }

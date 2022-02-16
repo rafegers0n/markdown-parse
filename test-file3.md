@@ -1,3 +1,3 @@
 
-[a link!]https://faultyinput.com
+a link!https://faultyinput.com
 
